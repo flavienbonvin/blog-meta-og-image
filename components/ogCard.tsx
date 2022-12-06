@@ -13,8 +13,13 @@ const OGCard = ({ title, subtitle, tags, publicationDate }: Props) => {
       tw="flex h-[630px] w-[1200px] items-center justify-center"
       style={{
         background:
-          "linear-gradient(133deg, rgba(255,107,107,1) 0%, rgba(255,230,109,1) 35%, rgba(78,205,196,1) 100%) url(https:///blog-meta-og-image.vercel.app/noise.svg)",
+          "linear-gradient(133deg, rgba(255,107,107,1) 0%, rgba(255,230,109,1) 35%, rgba(78,205,196,1) 100%)",
       }}>
+      <div
+        tw="flex absolute h-[630px] w-[1200px]"
+        style={{
+          background: "url(https://grainy-gradients.vercel.app/noise.svg)",
+        }}></div>
       <div tw="relative flex h-[590px] w-[1160px] flex-col bg-white p-14 py-20">
         <div tw="grow flex">
           <img
