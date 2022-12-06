@@ -49,28 +49,24 @@ const Home: NextPage = () => {
               type="text"
               onChange={(e) => setTags(e.target.value)}
               value={tags}
+              placeholder="Comma separated tags"
             />
           </div>
           <Link
-            href={`/api/og?title=${title}&subtitle=${subTitle}&publicationDate=${publicationDate}`}
+            href={`/api/og?title=${title}&subtitle=${subTitle}&publicationDate=${publicationDate}&tags=${tags}`}
             target="_blank">
             <button className="w-fit rounded border px-2 py-1.5">
               Generate image
             </button>
           </Link>
         </div>
-        <div className="flex flex-col gap-10">
-          <div>
-            <Card title={title} subtitle={subTitle} />
-          </div>
-          <div>
-            <CardNoise
-              title={title}
-              subtitle={subTitle}
-              publicationDate={publicationDate}
-              tags={tags}
-            />
-          </div>
+        <div>
+          <CardNoise
+            title={title}
+            subtitle={subTitle}
+            publicationDate={publicationDate}
+            tags={tags}
+          />
         </div>
       </div>
     </div>

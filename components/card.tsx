@@ -27,7 +27,7 @@ const Card = ({ title, subtitle }: Props) => {
             src="/flavien.webp"
             width={200}
             height={200}
-            alt="logo"
+            alt="author"
             className="h-20 w-20 rounded-full"
           />
           <Image
