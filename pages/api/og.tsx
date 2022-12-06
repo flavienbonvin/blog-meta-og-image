@@ -14,8 +14,18 @@ export default async function (req: NextRequest) {
   const publicationDate = searchParams.get("publicationDate") ?? "Some date"
   const tags = searchParams.get("tags") ?? "Some date"
 
-  return new ImageResponse(<OGCard title={title} subtitle={subtitle} />, {
-    width: 1200,
-    height: 630,
-  })
+  return new ImageResponse(
+    (
+      <OGCard
+        title={title}
+        subtitle={subtitle}
+        publicationDate={publicationDate}
+        tags={tags}
+      />
+    ),
+    {
+      width: 1200,
+      height: 630,
+    }
+  )
 }
