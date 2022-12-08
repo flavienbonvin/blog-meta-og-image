@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-family: --font-plex;
+  }
+
   [type="text"],
   [type="email"],
   [type="url"],

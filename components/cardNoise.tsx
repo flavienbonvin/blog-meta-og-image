@@ -2,9 +2,6 @@ import Image from "next/image"
 
 import { Alata, Mulish } from "@next/font/google"
 
-const alata = Alata({ weight: ["400"] })
-const mulish = Mulish({ weight: ["200", "300", "400", "700", "800"] })
-
 interface Props {
   title: string
   subtitle: string
@@ -41,15 +38,15 @@ const CardNoise = ({ title, subtitle, tags, publicationDate }: Props) => {
           />
         </div>
         <h1
-          className={`mb-10 text-5xl font-bold tracking-wide text-[#292F36] ${alata.className}`}>
+          className={`--font-alata mb-10 text-5xl font-bold tracking-wide text-[#292F36]`}>
           {title}
         </h1>
         <h2
-          className={`mb-4 text-3xl tracking-wide text-[#292F36] ${mulish.className}`}>
+          className={`--font-mulish mb-4 text-3xl tracking-wide text-[#292F36]`}>
           {subtitle}
         </h2>
         <div
-          className={`flex gap-2 text-lg tracking-wide text-[#292F36] ${mulish.className}`}>
+          className={`--font-mulish flex gap-2 text-lg tracking-wide text-[#292F36]`}>
           <span>{publicationDate}</span>
           {splittedTags && splittedTags.length > 0 && (
             <>
