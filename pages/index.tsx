@@ -1,7 +1,6 @@
 import type { NextPage } from "next"
 import Link from "next/link"
 import { useState } from "react"
-import Card from "../components/card"
 import CardNoise from "../components/cardNoise"
 import Header from "../components/header"
 import Label from "../components/label"
@@ -10,7 +9,7 @@ const Home: NextPage = () => {
   const [title, setTitle] = useState(
     "How to Choose the Best JavaScript Library for Your React and Next Project?"
   )
-  const [subTitle, setsubTitle] = useState(
+  const [subTitle, setSubTitle] = useState(
     "6 things to consider before using a library"
   )
 
@@ -40,7 +39,7 @@ const Home: NextPage = () => {
             <input
               maxLength={60}
               type="text"
-              onChange={(e) => setsubTitle(e.target.value)}
+              onChange={(e) => setSubTitle(e.target.value)}
               value={subTitle}
             />
             <Label>Publication date</Label>

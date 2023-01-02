@@ -1,7 +1,5 @@
 import Image from "next/image"
 
-import { Alata, Mulish } from "@next/font/google"
-
 interface Props {
   title: string
   subtitle: string
@@ -10,7 +8,7 @@ interface Props {
 }
 
 const CardNoise = ({ title, subtitle, tags, publicationDate }: Props) => {
-  const splittedTags = tags.replaceAll(" ", "").split(",")
+  const splitTags = tags.replaceAll(" ", "").split(",")
 
   return (
     <div className="flex h-[630px] w-[1200px] items-center justify-center bg-gradient-to-br from-[#FF6B6B] via-[#FFE66D] to-[#4ECDC4]">
@@ -48,11 +46,11 @@ const CardNoise = ({ title, subtitle, tags, publicationDate }: Props) => {
         <div
           className={`--font-mulish flex gap-2 text-lg tracking-wide text-[#292F36]`}>
           <span>{publicationDate}</span>
-          {splittedTags && splittedTags.length > 0 && (
+          {splitTags && splitTags.length > 0 && (
             <>
               <span>·</span>
               <ul className="inline-flex gap-2">
-                {splittedTags.map((tag) => (
+                {splitTags.map((tag) => (
                   <li key={tag}>#{tag.toLowerCase()}</li>
                 ))}
               </ul>

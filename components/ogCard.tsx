@@ -6,7 +6,7 @@ interface Props {
 }
 
 const OGCard = ({ title, subtitle, tags, publicationDate }: Props) => {
-  const splittedTags = tags.replaceAll(" ", "").split(",")
+  const splitTags = tags.replaceAll(" ", "").split(",")
 
   return (
     <div
@@ -44,11 +44,11 @@ const OGCard = ({ title, subtitle, tags, publicationDate }: Props) => {
           tw={`flex gap-2 text-lg tracking-wide text-[#292F36]`}
           style={{ fontFamily: "mulish" }}>
           <span>{publicationDate}</span>
-          {splittedTags && splittedTags.length > 0 && (
+          {splitTags && splitTags.length > 0 && (
             <>
               <span tw="ml-2">·</span>
               <ul>
-                {splittedTags.map((tag) => (
+                {splitTags.map((tag) => (
                   <li key={tag} tw="ml-2">
                     #{tag.toLowerCase()}
                   </li>
